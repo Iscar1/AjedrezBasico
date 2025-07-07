@@ -59,6 +59,7 @@ def dibujar_piezas(ventana, posiciones):
                 if (pieza == 'K' and esta_en_jaque(posiciones, True)) or \
                    (pieza == 'k' and esta_en_jaque(posiciones, False)):
                     color = (255, 0, 0)
+                pygame.draw.circle(ventana, color, centro, radio)
                 fuente = pygame.font.SysFont(None, 32)
                 letra = pieza.upper() if color == COLOR_BLANCO or color == (255, 0, 0) else pieza.lower()
                 texto = fuente.render(letra, True, (0,0,0) if color == COLOR_BLANCO else (255,255,255))
@@ -339,6 +340,7 @@ def dibujar_piezas_rotadas(ventana, posiciones, rotacion_180):
                 if (pieza == 'K' and esta_en_jaque(posiciones, True)) or \
                    (pieza == 'k' and esta_en_jaque(posiciones, False)):
                     color = (255, 0, 0)
+                pygame.draw.circle(ventana, color, centro, radio)
                 fuente = pygame.font.SysFont(None, 32)
                 letra = pieza.upper() if color == COLOR_BLANCO or color == (255, 0, 0) else pieza.lower()
                 texto = fuente.render(letra, True, (0,0,0) if color == COLOR_BLANCO else (255,255,255))
